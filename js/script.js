@@ -36,7 +36,7 @@
 		}
 	];
 
-	for (var i = 0; i < boxes.length; i++) {
+	for (var i = 0; i < data.length; i++) {
 
 		var boxHeader = boxes[i].querySelector('header');
 		var dataHeader = data[i].title;
