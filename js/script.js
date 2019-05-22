@@ -1,8 +1,9 @@
 'use strict';
 (function(){
-
+/*
 	var mainBox = document.querySelector('.container')
 	var boxes = mainBox.querySelectorAll('div');
+*/
 	var data = [
 		{
 			id: 'box1',
@@ -37,6 +38,36 @@
 	];
 
 	for (var i = 0; i < data.length; i++) {
+		var boxId = data[i].id;
+		var newDiv = document.createElement('div');
+		newDiv.innerHTML = boxId; //DEL
+		document.body.appendChild(newDiv);
+	};
+/*
+	for (var i = 0; i < data.length; i++) {
+		var boxId = data[i].id;
+		var newDiv = document.createElement('div');
+		var example = document.getElementsByClassName('content')
+		newDiv.innerHTML = boxId; //DEL
+		example.append(newDiv);
+	};
+*/
+
+/*
+var box = document.createElement('div')
+		var boxHeader = boxes[i].querySelector('header');
+		var dataHeader = data[i].title;
+		boxHeader.innerHTML += dataHeader;
+
+		var boxId = boxes[i];
+
+		var boxId = data[i].id;
+		var box[i] = document.createElement('div')
+
+		boxId.setAttribute('id', dataId);
+*/
+/*
+	for (var i = 0; i < data.length; i++) {
 
 		var boxHeader = boxes[i].querySelector('header');
 		var dataHeader = data[i].title;
@@ -50,10 +81,10 @@
 		var dataContent = data[i].content;
 		boxContent.innerHTML += dataContent;
 
-		/* działą, ale wrzuca wszystkie wartości tablicy categories do jednej klasy, a nie do kilku
-		var dataClass = data[i].categories;
-		boxId.setAttribute('class', dataClass)
-		*/
+		//działą, ale wrzuca wszystkie wartości tablicy categories do jednej klasy, a nie do kilku
+		//var dataClass = data[i].categories;
+		//boxId.setAttribute('class', dataClass)
+		
 
 		var dataClass = data[i].categories;
 		for (var i = 0; i < dataClass.length; i++) {
@@ -62,4 +93,6 @@
 			boxId.setAttribute('class', dataClassItem);
 		};
 	};
+*/
+
 })(); 

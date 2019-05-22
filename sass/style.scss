@@ -1,7 +1,11 @@
 body {
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
+/*
 .container {
     display: flex;
     justify-content: space-between;
@@ -15,6 +19,17 @@ body {
         header {
             border-bottom: 1px solid #000;
         }
+    }
+}
+*/
+div {
+    opacity: 0.3;
+    width: 200px;
+    border: 1px solid #000;
+    min-height: 100px;
+    text-align: center;
+    header {
+        border-bottom: 1px solid #000;
     }
 }
 

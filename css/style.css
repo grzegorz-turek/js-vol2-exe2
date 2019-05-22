@@ -1,8 +1,5 @@
 body {
   box-sizing: border-box;
-}
-
-.container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -10,7 +7,24 @@ body {
   padding: 20px;
 }
 
-.container div {
+/*
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    div {
+        opacity: 0.3;
+        width: 200px;
+        border: 1px solid #000;
+        min-height: 100px;
+        text-align: center;
+        header {
+            border-bottom: 1px solid #000;
+        }
+    }
+}
+*/
+div {
   opacity: 0.3;
   width: 200px;
   border: 1px solid #000;
@@ -18,7 +32,7 @@ body {
   text-align: center;
 }
 
-.container div header {
+div header {
   border-bottom: 1px solid #000;
 }
 
