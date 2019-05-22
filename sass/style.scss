@@ -7,7 +7,7 @@ body {
     justify-content: space-between;
     padding: 20px;
     div {
-        opacity: 0.7;
+        opacity: 0.3;
         width: 200px;
         border: 1px solid #000;
         min-height: 100px;
@@ -23,7 +23,7 @@ body {
 }
 
 .special-header {
-    color: red;
+    background-color: red;
 }
 
 .important {

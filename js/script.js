@@ -1,7 +1,8 @@
 'use strict';
 (function(){
 
-	var boxes = document.querySelectorAll('div');
+	var mainBox = document.querySelector('.container')
+	var boxes = mainBox.querySelectorAll('div');
 	var data = [
 		{
 			id: 'box1',
@@ -39,10 +40,26 @@
 
 		var boxHeader = boxes[i].querySelector('header');
 		var dataHeader = data[i].title;
-		boxHeader.innerHTML += dataHeader + '<br>';
+		boxHeader.innerHTML += dataHeader;
+
+		var boxId = boxes[i];
+		var dataId = data[i].id;
+		boxId.setAttribute('id', dataId);
 
 		var boxContent = boxes[i].querySelector('p');
 		var dataContent = data[i].content;
 		boxContent.innerHTML += dataContent;
+
+		/* działą, ale wrzuca wszystkie wartości tablicy categories do jednej klasy, a nie do kilku
+		var dataClass = data[i].categories;
+		boxId.setAttribute('class', dataClass)
+		*/
+
+		var dataClass = data[i].categories;
+		for (var i = 0; i < dataClass.length; i++) {
+			var dataClassItem = dataClass[i];
+			//boxId.classList.add(dataClassItem);
+			boxId.setAttribute('class', dataClassItem);
+		};
 	};
 })(); 
