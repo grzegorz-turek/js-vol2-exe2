@@ -45,9 +45,12 @@
 
 		var boxContent = data[i].content;
 		newDiv.innerHTML = boxContent; //DEL
+
 		document.body.append(newDiv);
 
 		newDiv.append(newHeader);
+
+		//newDiv.append(boxContent);
 
 		//var document.body = newDiv.parentNode;
 		//document.body.insertBefore(newDiv, newHeader);
@@ -72,8 +75,6 @@
 
 		// wstawia nowy element do DOM przed sp2
 		parentDiv.insertBefore(sp1, sp2);
-
-
 
 	};
 
