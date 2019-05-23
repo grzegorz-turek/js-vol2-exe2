@@ -1,9 +1,5 @@
 'use strict';
 (function(){
-/*
-	var mainBox = document.querySelector('.container')
-	var boxes = mainBox.querySelectorAll('div');
-*/
 	var data = [
 		{
 			id: 'box1',
@@ -38,54 +34,54 @@
 	];
 
 	for (var i = 0; i < data.length; i++) {
-		var boxId = data[i].id;
 		var newDiv = document.createElement('div');
-		newDiv.innerHTML = boxId; //DEL
-		document.body.appendChild(newDiv);
-	};
-/*
-	for (var i = 0; i < data.length; i++) {
 		var boxId = data[i].id;
-		var newDiv = document.createElement('div');
-		var example = document.getElementsByClassName('content')
-		newDiv.innerHTML = boxId; //DEL
-		example.append(newDiv);
+		newDiv.setAttribute('id', boxId);
+
+		var newHeader = document.createElement('header');
+		var boxHeader = data[i].title;
+		newHeader.innerHTML = boxHeader;
+
+
+		var boxContent = data[i].content;
+		newDiv.innerHTML = boxContent; //DEL
+		document.body.append(newDiv);
+
+		newDiv.append(newHeader);
+
+		//var document.body = newDiv.parentNode;
+		//document.body.insertBefore(newDiv, newHeader);
+	}
+
+/*
+		// tworzy pusty węzeł elementu
+		// bez ID, jakichkolwiek atrybutów lub jakiejkolwiek zawartości
+		var sp1 = document.createElement('div');
+
+		// daje to atrybut id nazwany 'newSpan'
+		sp1.setAttribute("id", "testid");
+
+		// tworzy jakąś zawartość dla nowo powstałego elementu.
+		var sp1_content = document.createTextNode("Jest to nowy element span. ");
+
+		// zwraca się, która treść ma być do nowego elementu.
+		sp1.appendChild(sp1_content);
+
+		var sp2 = document.getElementById("content");
+		var parentDiv = sp2.parentNode;
+
+		// wstawia nowy element do DOM przed sp2
+		parentDiv.insertBefore(sp1, sp2);
+
+
+
 	};
-*/
 
 /*
-var box = document.createElement('div')
-		var boxHeader = boxes[i].querySelector('header');
-		var dataHeader = data[i].title;
-		boxHeader.innerHTML += dataHeader;
-
-		var boxId = boxes[i];
-
-		var boxId = data[i].id;
-		var box[i] = document.createElement('div')
-
-		boxId.setAttribute('id', dataId);
-*/
-/*
-	for (var i = 0; i < data.length; i++) {
-
-		var boxHeader = boxes[i].querySelector('header');
-		var dataHeader = data[i].title;
-		boxHeader.innerHTML += dataHeader;
-
-		var boxId = boxes[i];
-		var dataId = data[i].id;
-		boxId.setAttribute('id', dataId);
-
-		var boxContent = boxes[i].querySelector('p');
-		var dataContent = data[i].content;
-		boxContent.innerHTML += dataContent;
-
 		//działą, ale wrzuca wszystkie wartości tablicy categories do jednej klasy, a nie do kilku
 		//var dataClass = data[i].categories;
 		//boxId.setAttribute('class', dataClass)
 		
-
 		var dataClass = data[i].categories;
 		for (var i = 0; i < dataClass.length; i++) {
 			var dataClassItem = dataClass[i];
