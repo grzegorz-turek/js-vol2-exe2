@@ -9,7 +9,6 @@ body {
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: 20px;
-  border-bottom: 1px solid blue;
 }
 
 .content div {
@@ -33,6 +32,6 @@ body {
 }
 
 .important {
-  opacity: 1;
+  opacity: 1 !important;
 }
 /*# sourceMappingURL=style.css.map */

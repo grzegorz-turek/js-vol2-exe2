@@ -7,7 +7,6 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    border-bottom: 1px solid blue;
     div {
         opacity: 0.3;
         width: 200px;
@@ -29,5 +28,5 @@ body {
 }
 
 .important {
-    opacity: 1;
+    opacity: 1 !important;
 }

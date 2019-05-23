@@ -35,30 +35,17 @@
 
 	for (var i = 0; i < data.length; i++) {
 		var newDiv = document.createElement('div');
-		var mainDiv = document.getElementById('content'); //
-		mainDiv.appendChild(newDiv); //
-
+		var mainDiv = document.getElementById('content');
+		mainDiv.appendChild(newDiv);
 		var boxId = data[i].id;
 		newDiv.setAttribute('id', boxId);
-
 		var newHeader = document.createElement('header');
 		newDiv.appendChild(newHeader);
-
 		var boxHeader = data[i].title;
 		newHeader.innerHTML = boxHeader;
-
 		var boxContent = data[i].content;
 		newDiv.innerHTML += boxContent;
-
-		var dataClass = data[i].categories;
-		for (var i = 0; i < dataClass.length; i++) {
-			var dataClassSingle = dataClass[i];
-			newDiv.setAttribute('class', dataClassSingle);
-		};
+		var dataClass = data[i].categories.join(' ');
+		newDiv.setAttribute('class', dataClass);
 	};
-
-		//działą, ale wrzuca wszystkie wartości tablicy categories do jednej klasy, a nie do kilku
-		//var dataClass = data[i].categories;
-		//boxId.setAttribute('class', dataClass)
-
 })(); 
