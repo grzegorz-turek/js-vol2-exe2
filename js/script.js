@@ -33,9 +33,9 @@
 		}
 	];
 
+	var mainDiv = document.getElementById('content');
 	for (var i = 0; i < data.length; i++) {
 		var newDiv = document.createElement('div');
-		var mainDiv = document.getElementById('content');
 		mainDiv.appendChild(newDiv);
 		var boxId = data[i].id;
 		newDiv.setAttribute('id', boxId);
